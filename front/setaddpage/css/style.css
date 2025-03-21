@@ -1,0 +1,120 @@
+.box {
+  width: 500px;
+  height: 289px;
+}
+
+.box .POPUP {
+  position: fixed;
+  width: 502px;
+  height: 289px;
+  top: 0;
+  left: 0;
+}
+
+.box .overlap-group {
+  position: relative;
+  width: 500px;
+  height: 289px;
+  background-color: var(--white);
+  border-radius: 16px;
+}
+
+.box .search {
+  width: 440px;
+  height: 38px;
+  padding: 8px 16px;
+  position: absolute;
+  top: 67px;
+  left: 30px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: var(--purple);
+  background: none;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #c3c1e5;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.box .select {
+  left: 373px;
+  background-color: var(--purple);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 22px;
+  position: absolute;
+  top: 233px;
+  border-radius: 5px;
+}
+
+.box .content {
+  width: 55px;
+  position: relative;
+  height: 18px;
+  margin-right: -2.00px;
+}
+
+.box .apply {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Kanit-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--white);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.box .new-note {
+  position: absolute;
+  top: 18px;
+  left: 195px;
+  font-family: "Kanit-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--black);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.box .content-wrapper {
+  left: 30px;
+  border: 1px solid;
+  border-color: var(--purple);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 22px;
+  position: absolute;
+  top: 233px;
+  border-radius: 5px;
+}
+
+.box .cancel-wrapper {
+  width: 68px;
+  position: relative;
+  height: 18px;
+  margin-right: -2.00px;
+}
+
+.box .cancel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Kanit-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--purple);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}

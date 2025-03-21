@@ -1,0 +1,8 @@
+:root {
+  --black: rgba(37, 37, 37, 1);
+  --purple: rgba(108, 99, 255, 1);
+  --white: rgba(247, 247, 247, 1);
+  --focus-light: 0px 0px 4px 0px rgba(108, 99, 255, 1);
+  --focus-dark: 0px 0px 4px 0px rgba(255, 255, 255, 1);
+  --shadow: 0px 4px 140px 0px rgba(0, 0, 0, 0.33);
+}

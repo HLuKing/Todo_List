@@ -27,23 +27,34 @@
         </header>
       </div>
       <div class="BODY">
-        <div class="add-button"><img class="vector-2" src="img/PlusIcon.svg" /></div>
+        <div class="add-button" id="addButton"><img class="vector-2" src="img/PlusIcon.svg" /></div>
+        <div id="modalBackground" class="modal-background">
+          <!-- 모달 내용 -->
+          <div class="modal-content">
+            <iframe src="../setaddpage/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
         <div class="LIST">
           <div class="overlap">
             <div class="note">
-              <div class="rectangle"></div>
-              <div class="div">NOTE #1</div>
+              <input type="checkbox" id="noteCheckbox" class="note-checkbox" />
+              <label class="note-label">NOTE #1</label>
               <div class="options">
-                <img class="img-2" src="img/SetIcon.svg" /> <img class="img-2" src="img/TrashIcon.svg" />
+                <img class="img-2 trash-icon" src="img/TrashIcon.svg" data-note-id="1" />
               </div>
             </div>
             <img class="line" src="img/line-1.svg" />
           </div>
           <img class="line-2" src="img/line-2.svg" />
         </div>
+        <div id="clearImage" class="clear-image">
+          <img src="img/clear.svg" alt="Clear" />
+          <p class="clear-text">목표가 비었어요...</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<script src="scripts/main.js"></script>
 </body>
 </html>
