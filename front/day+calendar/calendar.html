@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>달력</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="calendar.js"></script>
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="month-nav">
+            <span class="arrow" onclick="changeMonth(-1)">◀</span>
+            <h3 id="monthYear">Month</h3>
+            <span class="arrow" onclick="changeMonth(1)">▶</span>
+        </div>
+        <table class="calendar">
+            <tr>
+                <td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td>
+            </tr>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+</body>
+</html>
