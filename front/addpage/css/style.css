@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .MAIN-light-scheme .CONTAINER-wrapper {
@@ -175,22 +176,14 @@
   z-index: 1000; /* 다른 요소 위에 표시 */
 }
 
-/* 모달 내용 스타일 */
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
-
 /* iframe 스타일 */
-.modal-content iframe {
-  width: 100%;
-  height: 400px;
+#popupIframe {
+  width: 500px;
+  height: 289px;
   border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent; /* 배경색 투명 */
 }
 
 .modal-content {

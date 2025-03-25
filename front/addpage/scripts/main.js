@@ -1,19 +1,37 @@
-// 모달 열기
-document.getElementById('addButton').addEventListener('click', function() {
-    document.getElementById('modalBackground').style.display = 'flex';
+// 팝업 열기
+document.getElementById("addButton").addEventListener("click", function () {
+    const modalBackground = document.getElementById("modalBackground");
+    const popupIframe = document.getElementById("popupIframe");
+
+    // setaddpage/index.html을 iframe에 로드
+    popupIframe.src = "../setaddpage/index.html";
+    // 팝업 배경 표시
+    modalBackground.style.display = "flex";
 });
 
-// iframe으로부터 메시지 수신
-window.addEventListener('message', function(event) {
-    if (event.data === 'closeModal') {
-        document.getElementById('modalBackground').style.display = 'none';
+// 팝업 닫기 (배경 클릭 시)
+document.getElementById("modalBackground").addEventListener("click", function (event) {
+    if (event.target === this) {
+        const modalBackground = document.getElementById("modalBackground");
+        const popupIframe = document.getElementById("popupIframe");
+
+        // iframe 내용 초기화
+        popupIframe.src = "about:blank";
+        // 팝업 배경 숨기기
+        modalBackground.style.display = "none";
     }
 });
 
-// 배경 클릭 시 모달 닫기 (옵션)
-document.getElementById('modalBackground').addEventListener('click', function(event) {
-    if (event.target === this) {
-        this.style.display = 'none';
+// iframe 내부의 CANCEL 버튼 이벤트 처리
+window.addEventListener("message", function (event) {
+    if (event.data === "closePopup") {
+        const modalBackground = document.getElementById("modalBackground");
+        const popupIframe = document.getElementById("popupIframe");
+
+        // iframe 내용 초기화
+        popupIframe.src = "about:blank";
+        // 팝업 배경 숨기기
+        modalBackground.style.display = "none";
     }
 });
 
@@ -43,3 +61,4 @@ function checkIfAllNotesDeleted() {
         clearImage.style.display = 'none'; // 항목이 남아있으면 이미지 숨김
     }
 }
+
