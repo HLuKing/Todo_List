@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Note</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- 필요하면 스타일 추가 -->
+</head>
+<body>
+<div class="popup-container">
+    <h2>새로운 목표 추가</h2>
+    <input type="text" id="noteInput" placeholder="목표 입력">
+    <button id="applyButton">Apply</button>
+    <button id="cancelButton">Cancel</button>
+</div>
+
+<script>
+    // Apply 버튼 클릭 시 부모 창에 데이터 전달
+    document.getElementById("applyButton").addEventListener("click", function () {
+        const noteText = document.getElementById("noteInput").value.trim(); // 입력값 가져오기
+
+        if (noteText !== "") {
+            window.parent.postMessage({ action: "addNote", noteText: noteText }, "*"); // 부모 창에 데이터 전달
+        }
+    });
+
+    // Cancel 버튼 클릭 시 부모 창에 팝업 닫기 요청
+    document.getElementById("cancelButton").addEventListener("click", function () {
+        window.parent.postMessage("closePopup", "*");
+    });
+</script>
+</body>
+</html>
