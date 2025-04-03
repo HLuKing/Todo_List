@@ -39,7 +39,7 @@ function closePopup() {
 function checkEmptyList() {
     const listContainer = document.getElementById("listContainer");
     const emptyMessage = document.getElementById("emptyMessage");
-    emptyMessage.style.display = listContainer.children.length === 0 ? "block" : "none";
+    emptyMessage.style.display = listContainer.querySelectorAll(".note").length === 0 ? "block" : "none";
 }
 
 function addNoteToList(noteText) {
