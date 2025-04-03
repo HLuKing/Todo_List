@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ff390b-c603-4b47-a81c-5e755431e5c9" name="변경" comment="아직 수정이 필요한 todo-list 화면">
-      <change afterPath="$PROJECT_DIR$/back/back" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/hello-sp-finish3/src/main/resources/static/hello-static.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/hello-sp-finish3/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Listpage/src/listMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/Listpage/src/listMain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Listpage/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Login/src/createAccountPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/Login/src/createAccountPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Login/src/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/Login/src/loginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Login/src/main.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,24 +29,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "HLuKing"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HLuKing&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="6ad09c0d-c67a-4fe4-b55a-05a25d0e33e9" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/HLuKing/Todo_List",
-    "accountId": "6ad09c0d-c67a-4fe4-b55a-05a25d0e33e9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HLuKing/Todo_List&quot;,
+    &quot;accountId&quot;: &quot;6ad09c0d-c67a-4fe4-b55a-05a25d0e33e9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2uWLte2Z5rE4m8jIX0rn4w5bJan" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -49,9 +56,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JavaScript 디버그.index.html.executor": "Run",
+    "JavaScript 디버그.loginPage.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jyj/Downloads/todo-list",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,6 +73,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="todo-list" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="todo-list" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742359605307</updated>
       <workItem from="1742359606519" duration="7541000" />
+      <workItem from="1743686860017" duration="1352000" />
     </task>
     <task id="LOCAL-00001" summary="아직 수정이 필요한 todo-list 화면">
       <option name="closed" value="true" />
