@@ -9,7 +9,6 @@ body {
 .container {
     width: 90%;
     max-width: 600px;
-    height: auto;
     min-height: 500px;
     background: white;
     padding: 30px;
@@ -56,10 +55,18 @@ body {
     text-align: left;
 }
 
-.trash-icon {
+.trash-icon, .edit-icon {
     cursor: pointer;
-    color: red;
     font-size: 18px;
+    margin-left: 10px;
+}
+
+.trash-icon {
+    color: red;
+}
+
+.edit-icon {
+    color: blue;
 }
 
 .add-button {
@@ -101,8 +108,6 @@ body {
     width: 80%;
     max-width: 400px;
     border: 2px solid #c9a7eb;
-    flex-direction: column;
-    align-items: center;
 }
 
 .popup input {
@@ -111,7 +116,6 @@ body {
     margin: 20px auto;
     border: 2px solid #c9a7eb;
     border-radius: 5px;
-    display: block;
     text-align: center;
 }
 
@@ -144,34 +148,8 @@ body {
 
 #applyButton:hover {
     background: #b08bdb;
-    box-shadow: 0px 4px 10px rgba(201, 167, 235, 0.5);
 }
 
 #cancelButton:hover {
     background: lightgray;
-    box-shadow: 0px 4px 10px rgba(169, 169, 169, 0.5);
-}
-
-.error-title {
-    font-size: 50px;
-    color: #e74c3c;
-}
-
-.error-message {
-    font-size: 18px;
-    color: #555;
-}
-
-.home-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #c9a7eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.home-button:hover {
-    background-color: #7b0ce4;
 }

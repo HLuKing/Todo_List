@@ -1,41 +1,46 @@
-document.getElementById("addButton").addEventListener("click", function () {
-    document.getElementById("modalBackground").style.display = "flex";
-});
+let editMode = false;
+let editTarget = null;
 
+document.getElementById("addButton").addEventListener("click", function () {
+    openPopup("할 일 추가", "");
+    editMode = false;
+    editTarget = null;
+});
 
 document.getElementById("cancelButton").addEventListener("click", function () {
     closePopup();
 });
 
-
 document.getElementById("applyButton").addEventListener("click", function () {
     const noteText = document.getElementById("noteInput").value.trim();
 
     if (noteText !== "") {
-        addNoteToList(noteText);
+        if (editMode && editTarget) {
+            // 수정 모드일 때
+            editTarget.textContent = noteText;
+        } else {
+            // 추가 모드일 때
+            addNoteToList(noteText);
+        }
         closePopup();
     }
 });
 
+function openPopup(title, text) {
+    document.getElementById("noteInput").value = text;
+    document.getElementById("modalBackground").style.display = "flex";
+}
 
 function closePopup() {
     document.getElementById("modalBackground").style.display = "none";
-    document.getElementById("noteInput").value = ""; // 입력 필드 초기화
+    document.getElementById("noteInput").value = "";
 }
-
 
 function checkEmptyList() {
     const listContainer = document.getElementById("listContainer");
     const emptyMessage = document.getElementById("emptyMessage");
-
-
-    if (listContainer.children.length <= 1) {
-        emptyMessage.style.display = "block";
-    } else {
-        emptyMessage.style.display = "none";
-    }
+    emptyMessage.style.display = listContainer.children.length === 0 ? "block" : "none";
 }
-
 
 function addNoteToList(noteText) {
     const listContainer = document.getElementById("listContainer");
@@ -50,16 +55,22 @@ function addNoteToList(noteText) {
     label.classList.add("note-label");
     label.textContent = noteText;
 
-
     checkbox.addEventListener("change", function () {
         label.classList.toggle("checked", checkbox.checked);
     });
 
+    const editButton = document.createElement("span");
+    editButton.classList.add("edit-icon");
+    editButton.innerHTML = "✏️";
+    editButton.addEventListener("click", function () {
+        editMode = true;
+        editTarget = label;
+        openPopup("할 일 수정", label.textContent);
+    });
+
     const trashIcon = document.createElement("span");
     trashIcon.classList.add("trash-icon");
-    trashIcon.innerHTML = "🗑️"; // 휴지통 이모지
-
-
+    trashIcon.innerHTML = "🗑️";
     trashIcon.addEventListener("click", function () {
         newNote.remove();
         checkEmptyList();
@@ -67,15 +78,11 @@ function addNoteToList(noteText) {
 
     newNote.appendChild(checkbox);
     newNote.appendChild(label);
+    newNote.appendChild(editButton);
     newNote.appendChild(trashIcon);
 
     listContainer.appendChild(newNote);
-
     checkEmptyList();
 }
-if (!window.location.pathname.includes("listMain.html")) {
-    window.location.href = "404.html";
-}
-
 
 checkEmptyList();
